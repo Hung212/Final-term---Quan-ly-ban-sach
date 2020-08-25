@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0978891-2411-4E7D-91E1-57747A8243C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLNhaSach</RootNamespace>
+    <AssemblyName>QLNhaSach</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.1460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Compression.Base.18.1.0.59\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.1460.0.59, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.Licensing.18.1.0.59\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.XlsIO.Base, Version=18.1460.0.59, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>packages\Syncfusion.XlsIO.WinForms.18.1.0.59\lib\net46\Syncfusion.XlsIO.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\eEvents.cs" />
+    <Compile Include="Forms\fTraCuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fTraCuu.designer.cs">
+      <DependentUpon>fTraCuu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repos\iRestful.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Repos\repo_tblSach.cs" />
+    <Compile Include="Repos\repo_tblLoaiSach.cs" />
+    <Compile Include="Repos\repo_tblTacGia.cs" />
+    <Compile Include="Repos\repo_tblKhachHang.cs" />
+    <Compile Include="Repos\repo_tblHoaDon.cs" />
+    <Compile Include="Repos\repo_ChiTiet_TheLoaiSach.cs" />
+    <Compile Include="Repos\repo_ChiTiet_TacGiaSach.cs" />
+    <Compile Include="Repos\repo_PhieuNhapSach.cs" />
+    <Compile Include="Repos\repo_ChiTiet_HoaDonBanSach.cs" />
+    <Compile Include="Repos\repo_BaoCaoTon.cs" />
+    <Compile Include="Repos\repo_BaoCaoCongNo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\tblSach.cs" />
+    <Compile Include="Models\tblLoaiSach.cs" />
+    <Compile Include="Models\tblTacGia.cs" />
+    <Compile Include="Models\tblKhachHang.cs" />
+    <Compile Include="Models\tblHoaDon.cs" />
+    <Compile Include="Models\ChiTiet_TheLoaiSach.cs" />
+    <Compile Include="Models\ChiTiet_TacGiaSach.cs" />
+    <Compile Include="Models\PhieuNhapSach.cs" />
+    <Compile Include="Models\ChiTiet_HoaDonBanSach.cs" />
+    <Compile Include="Models\BaoCaoTon.cs" />
+    <Compile Include="Models\BaoCaoCongNo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\tblSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblSach.Designer.cs">
+      <DependentUpon>tblSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblLoaiSach.Designer.cs">
+      <DependentUpon>tblLoaiSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblTacGia.Designer.cs">
+      <DependentUpon>tblTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblKhachHang.Designer.cs">
+      <DependentUpon>tblKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\tblHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tblHoaDon.Designer.cs">
+      <DependentUpon>tblHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChiTiet_TheLoaiSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChiTiet_TheLoaiSach.Designer.cs">
+      <DependentUpon>ChiTiet_TheLoaiSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChiTiet_TacGiaSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChiTiet_TacGiaSach.Designer.cs">
+      <DependentUpon>ChiTiet_TacGiaSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PhieuNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PhieuNhapSach.Designer.cs">
+      <DependentUpon>PhieuNhapSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChiTiet_HoaDonBanSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChiTiet_HoaDonBanSach.Designer.cs">
+      <DependentUpon>ChiTiet_HoaDonBanSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaoCaoTon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaoCaoTon.Designer.cs">
+      <DependentUpon>BaoCaoTon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BaoCaoCongNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaoCaoCongNo.Designer.cs">
+      <DependentUpon>BaoCaoCongNo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configs\Connection.cs" />
+    <Compile Include="Logics\FunctionHelper.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\fTraCuu.resx">
+      <DependentUpon>fTraCuu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Forms\fSearchAndReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fSearchAndReturn.Designer.cs">
+      <DependentUpon>fSearchAndReturn.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\fSearchAndReturn.resx">
+      <DependentUpon>fSearchAndReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\tblSach.resx">
+      <DependentUpon>tblSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tblLoaiSach.resx">
+      <DependentUpon>tblLoaiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tblTacGia.resx">
+      <DependentUpon>tblTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tblKhachHang.resx">
+      <DependentUpon>tblKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tblHoaDon.resx">
+      <DependentUpon>tblHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChiTiet_TheLoaiSach.resx">
+      <DependentUpon>ChiTiet_TheLoaiSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChiTiet_TacGiaSach.resx">
+      <DependentUpon>ChiTiet_TacGiaSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PhieuNhapSach.resx">
+      <DependentUpon>PhieuNhapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChiTiet_HoaDonBanSach.resx">
+      <DependentUpon>ChiTiet_HoaDonBanSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaoCaoTon.resx">
+      <DependentUpon>BaoCaoTon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaoCaoCongNo.resx">
+      <DependentUpon>BaoCaoCongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userpng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

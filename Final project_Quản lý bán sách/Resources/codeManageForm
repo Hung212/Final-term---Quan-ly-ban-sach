@@ -1,0 +1,115 @@
+    public partial class form#paramsfilename : Form
+    {
+        #paramasDanhSachBien
+        
+        public form#paramsfilename()
+        {
+            InitializeComponent();
+        }
+
+        #paramasHelpLCode
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+			#paramsbtnLuu_Click
+        }
+
+        private void btnHoanTac_Click(object sender, EventArgs e)
+        {
+			#paramsbtnHoanTac_Click
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+			#paramsbtnXoa_Click
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+			#paramsbtnSua_Click
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+			#paramsbtnThem_Click
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+			#paramsbtnLamMoi_Click
+
+            dgvData_Sorted(sender, e);
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(this.txtSearch.Text != null)
+            {
+                FunctionHelper.Find(this.txtSearch.Text, ref this.dgvData);
+            }
+        }
+
+        private void dgvData_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+			#paramsdgvData_RowEnter
+        }
+
+        private void form#paramsfilename_Load(object sender, EventArgs e)
+        {
+            btnLamMoi_Click(sender, e);
+        }
+
+        private void chbNocation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.chbNocation.Checked)
+                this.chbNocation.Text = "Hiện thông báo";
+            else
+                this.chbNocation.Text = "Tắt thông báo";
+        }
+
+        private void btnLamTrong_Click(object sender, EventArgs e)
+        {
+			#paramsbtnLamTrong_Click
+        }
+
+        private void form#paramsfilename_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            try
+            {
+                if (this.Owner != null)
+                {
+                    this.Owner.Show();
+                    this.Owner.Enabled = true;
+                    this.Owner = null;
+                    this.Dispose();
+                }
+            }
+            catch (Exception) { }
+        }
+
+        private void dgvData_Sorted(object sender, EventArgs e)
+        {
+            if (!this.chbTatMau.Checked)
+                return;
+
+            bool bluebackgroud = false;
+            foreach (DataGridViewRow item in this.dgvData.Rows)
+            {
+                if (bluebackgroud)
+                {
+                    item.DefaultCellStyle.BackColor = Color.SkyBlue;
+                    bluebackgroud = false;
+                }
+                else
+                    bluebackgroud = true;
+            }
+        }
+
+        private void chbTatMau_CheckedChanged(object sender, EventArgs e)
+        {
+            btnLamMoi_Click(sender, e);
+        }
+
+		#paramasEventCode
+
+    }
